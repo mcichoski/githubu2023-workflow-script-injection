@@ -14,7 +14,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Check issue title
-        env: ISSUE_TITLE: ${{ github.event.issue.title }}
+        env:
+          ISSUE_TITLE: ${{ github.event.issue.title }}
         run: |
           title="$ISSUE_TITLE"
           if [[ "$title" =~ ^octocat ]]; then
